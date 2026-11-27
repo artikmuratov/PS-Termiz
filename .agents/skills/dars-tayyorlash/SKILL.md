@@ -39,7 +39,7 @@ Foydalanuvchi biror darsni (masalan, "5-darsni tayyorla" yoki "Flexbox darsini t
 ## 4-bosqich: Amaliy mini-dastur va topshiriqlar tayyorlash
 1. `darslar/modul-XX/dars-YYY/amaliyot/` papkasida quyidagi 3 ta faylni yarat:
    - `index.html` — brauzerda darhol ishlaydigan tayyor namuna ("Men yozaman" bosqichi uchun, o'zbekcha izohlar bilan).
-   - `starter.html` — **keyingi 45 daqiqalik mustahkamlash darsi** uchun o'quvchilar to'ldirib bajaradigan boshlang'ich shablon (`<!-- TOPSHIRIQ 1 -->`, `<!-- TOPSHIRIQ 2 -->`, `<!-- YULDUZCHA TOPSHIRIQ -->` izohlari bilan).
+   - `starter.html` — **keyingi 45 daqiqalik mustahkamlash darsi** uchun **"Namuna → Sening varianting"** tamoyilidagi fayl: har bir darajada tayyor ishlaydigan misol (namuna) ko'rsatiladi va uning tagida o'quvchi o'z variantini (boshqa mavzu, rang, matn yoki media bilan) yasashi uchun joy (`<!-- SENING VARIANTING -->`) beriladi.
    - `xatoni-top.html` — 3 ta ataylab qilingan xatoli "Xato ovchisi" mashqi.
 
 ## 5-bosqich: Git'ga yuklash va hisobot tayyorlash

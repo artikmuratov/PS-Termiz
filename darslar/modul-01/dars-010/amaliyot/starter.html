@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mening Media Sahifam — Mustahkamlash (10-dars)</title>
+  <title>Misol va Sening Varianting — Mustahkamlash (10-dars)</title>
   <style>
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
       background: #0f172a;
       color: #f8fafc;
-      max-width: 760px;
-      margin: 40px auto;
+      max-width: 800px;
+      margin: 36px auto;
       padding: 0 20px;
       line-height: 1.6;
     }
@@ -18,36 +18,110 @@
     .card {
       background: #1e293b;
       border: 1px solid #334155;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 20px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
-    h2 { color: #a78bfa; margin-bottom: 8px; }
+    h2 { color: #a78bfa; margin-bottom: 10px; }
+    .example {
+      background: #020617;
+      border-left: 4px solid #34d399;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+    .todo {
+      background: rgba(56, 189, 248, 0.08);
+      border: 2px dashed #38bdf8;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+    audio, video { width: 100%; margin-top: 8px; border-radius: 8px; }
   </style>
 </head>
 <body>
-  <h1>Mening Media Sahifam</h1>
-  <p>Quyidagi 3 ta topshiriqni ketma-ket bajaring va natijani brauzerda tekshiring!</p>
+  <h1>Mening Media Sahifam (Misol → Sening varianting)</h1>
+  <p>Har bir bo'limda avval <strong>tayyor misolni</strong> ko'ring, keyin kod ichida uning <strong>o'zingizga mos variantini</strong> yasang!</p>
 
+  <!-- 1-DARAJA -->
   <div class="card">
-    <h2>1-daraja (Oson): Musiqa pleyeri</h2>
-    <p>Pastga <code>controls</code> atributiga ega <code>&lt;audio&gt;</code> tegini yozing:</p>
-    <!-- TOPSHIRIQ 1: Shu yerga <audio controls> ... </audio> kodini yozing -->
+    <h2>1-daraja (Oson): Audio pleyer</h2>
 
+    <div class="example">
+      <strong>Tayyor misol (Namuna): Kosmik ohang</strong>
+      <p>Bu oddiy <code>&lt;audio controls&gt;</code> pleyeri:</p>
+      <audio id="namunaAudio" controls>
+        Brauzeringiz audio tegini qo'llab-quvvatlamaydi.
+      </audio>
+    </div>
+
+    <div class="todo">
+      <strong>Endi sening navbating!</strong> O'zingning sevimli o'yin yoki tabiat ovozing uchun shunga o'xshash variant yasa (sarlavha + tavsif + <code>&lt;audio controls&gt;</code>):
+      <!-- SENING VARIANTING 1: Pastga o'z audio pleyeringni yoz -->
+
+    </div>
   </div>
 
+  <!-- 2-DARAJA -->
   <div class="card">
     <h2>2-daraja (O'rta): Video oynasi</h2>
-    <p>Pastga <code>controls</code>, <code>width="420"</code> va <code>poster</code> bilan <code>&lt;video&gt;</code> qo'shing:</p>
-    <!-- TOPSHIRIQ 2: Shu yerga <video controls width="420"> ... </video> va ostiga <p> tavsif yozing -->
 
+    <div class="example">
+      <strong>Tayyor misol (Namuna): Robot haqida video</strong>
+      <video controls width="420" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%230f172a'/%3E%3Ctext x='50%25' y='50%25' fill='%2334d399' font-family='sans-serif' font-size='26' text-anchor='middle'%3ENamuna: Robot Videosi%3C/text%3E%3C/svg%3E">
+        <source src="robot.mp4" type="video/mp4">
+        Brauzeringiz videoni ocholmadi.
+      </video>
+      <p>Izoh: Bu 420px kenglikdagi namuna video oynasi.</p>
+    </div>
+
+    <div class="todo">
+      <strong>Endi sening navbating!</strong> Boshqa mavzu (masalan, sevimli multfilming yoki sport) va boshqa kenglik (<code>width="360"</code>) bilan o'z <code>&lt;video&gt;</code> variantingni yasa:
+      <!-- SENING VARIANTING 2: Pastga o'z video oynangni va tavsifini yoz -->
+
+    </div>
   </div>
 
+  <!-- 3-DARAJA -->
   <div class="card">
-    <h2>3-daraja (Yulduzcha): Pleylist</h2>
-    <p>Sahifaga <code>loop</code> va <code>muted</code> atributli yana bitta pleyer hamda sevimli 3 ta qo'shiq/video ro'yxatini (<code>&lt;ul&gt;</code>) qo'shing:</p>
-    <!-- TOPSHIRIQ 3: Shu yerga qo'shimcha <audio controls loop muted> va <ul> ro'yxat yozing -->
+    <h2>3-daraja (Yulduzcha): Mini-pleylist</h2>
 
+    <div class="example">
+      <strong>Tayyor misol (Namuna): Qayta aylanuvchi pleyer + ro'yxat</strong>
+      <audio id="namunaLoop" controls loop muted>
+        Brauzeringiz audio tegini qo'llab-quvvatlamaydi.
+      </audio>
+      <ul>
+        <li>1. Kosmik musiqa (0:30)</li>
+        <li>2. Yomg'ir ovozi (1:00)</li>
+      </ul>
+    </div>
+
+    <div class="todo">
+      <strong>Endi sening navbating!</strong> O'zingning 3 ta sevimli qo'shiq yoki ovozingdan iborat mini-pleylist variantingni yasa:
+      <!-- SENING VARIANTING 3: Pastga <audio controls loop> va 3 ta bandli <ul> ro'yxat yoz -->
+
+    </div>
   </div>
+
+  <script>
+    // Namuna pleyerlar offline ham ovoz chiqarishi uchun kichik ohang yaratamiz
+    (function () {
+      const rate = 8000, notes = [330, 392, 440, 523], len = 2400, total = notes.length * len;
+      const buf = new ArrayBuffer(44 + total), v = new DataView(buf);
+      const w = (o, s) => { for (let i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i)); };
+      w(0, 'RIFF'); v.setUint32(4, 36 + total, true); w(8, 'WAVEfmt ');
+      v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+      v.setUint32(24, rate, true); v.setUint32(28, rate, true);
+      v.setUint16(32, 1, true); v.setUint16(34, 8, true); w(36, 'data'); v.setUint32(40, total, true);
+      notes.forEach((f, n) => {
+        for (let i = 0; i < len; i++) v.setUint8(44 + n * len + i, 128 + Math.round(45 * Math.sin(2 * Math.PI * f * i / rate)));
+      });
+      const url = URL.createObjectURL(new Blob([buf], { type: 'audio/wav' }));
+      document.getElementById('namunaAudio').src = url;
+      document.getElementById('namunaLoop').src = url;
+    })();
+  </script>
 </body>
 </html>
