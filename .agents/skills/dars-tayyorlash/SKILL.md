@@ -15,15 +15,16 @@ Foydalanuvchi biror darsni (masalan, "5-darsni tayyorla" yoki "Flexbox darsini t
 2. Dars raqami (`YYY`), modul raqami (`XX`), nazariya (N), amaliyot (A) va mini-loyiha talablarini ajratib ol.
 3. *(Ixtiyoriy)* Agar NotebookLM MCP ulangan bo'lsa, mavzu bo'yicha qiziqarli misollar yoki tushuntirish g'oyalarini qidir.
 
-## 2-bosqich: Kunlik dars rejasini yaratish
+## 2-bosqich: Kunlik dars rejalari (Asosiy + Mustahkamlash)
 1. `darslar/modul-XX/dars-YYY/` papkasini yarat.
-2. [dars-rejasi-shablon.md](./resources/dars-rejasi-shablon.md) asosida `dars-rejasi.md` faylini yoz.
-3. 45 daqiqalik vaqt taqsimotiga qat'iy rioya qil:
+2. [dars-rejasi-shablon.md](./resources/dars-rejasi-shablon.md) asosida `dars-rejasi.md` (1-kun: asosiy dars, 45 daqiqa) faylini yoz:
    - `0–5 daqiqa`: Qizdirish (o'tgan darsdan 2–3 savol)
    - `5–15 daqiqa`: Nazariya (maksimum 10 daqiqa, hayotiy o'xshatish bilan)
    - `15–37 daqiqa`: Amaliyot ("Men yozaman — biz yozamiz — sen yozasan")
    - `37–42 daqiqa`: Mini-ish / "Xatoni top" o'yini
    - `42–45 daqiqa`: Yakun (3 ta asosiy fikr + ixtiyoriy uy vazifasi)
+3. [amaliy-dars-rejasi-shablon.md](./resources/amaliy-dars-rejasi-shablon.md) asosida `amaliy-dars-rejasi.md` (2-kun: **45 daqiqalik to'liq amaliy mustahkamlash darsi**) faylini yoz:
+   - Yangi nazariya bo'lmasin; butun 45 daqiqa oldingi darsni mustahkamlashga qaratilsin (`0–5` tezkor takrorlash, `5–35` 3 darajali amaliy topshiriqlar: Oson → O'rta → Yulduzcha, `35–42` "Xato ovchisi" / juftlik tekshiruvi, `42–45` baholash).
 
 ## 3-bosqich: Interaktiv HTML slayd yaratish
 1. [slayd-shablon.html](./resources/slayd-shablon.html) andozasidan foydalanib, tashqi kutubxonalarsiz (offline ham ishlaydigan) `darslar/modul-XX/dars-YYY/slayd.html` faylini yarat.
@@ -35,10 +36,11 @@ Foydalanuvchi biror darsni (masalan, "5-darsni tayyorla" yoki "Flexbox darsini t
    - 7-slayd: Yakun (3 ta asosiy xulosa va keyingi darsga qiziqtirish)
 3. Klaviatura (`←` / `→` / `Space`) va tugmalar bilan boshqarish ishlashini ta'minla.
 
-## 4-bosqich: Amaliy mini-dastur tayyorlash
-1. `darslar/modul-XX/dars-YYY/amaliyot/` papkasida mavzuga mos, brauzerda darhol ishlaydigan mini-dastur yarat (`index.html`, kerak bo'lsa `style.css` va `script.js`).
-2. Kod ichiga 12 yoshli o'quvchi tushunadigan qisqa o'zbekcha izohlar (`<!-- ... -->` yoki `// ...`) qo'sh.
-3. Imkon qadar "Xatoni top" (`debug.html` yoki izohga olingan mashq) qismini ham qo'sh.
+## 4-bosqich: Amaliy mini-dastur va topshiriqlar tayyorlash
+1. `darslar/modul-XX/dars-YYY/amaliyot/` papkasida quyidagi 3 ta faylni yarat:
+   - `index.html` — brauzerda darhol ishlaydigan tayyor namuna ("Men yozaman" bosqichi uchun, o'zbekcha izohlar bilan).
+   - `starter.html` — **keyingi 45 daqiqalik mustahkamlash darsi** uchun o'quvchilar to'ldirib bajaradigan boshlang'ich shablon (`<!-- TOPSHIRIQ 1 -->`, `<!-- TOPSHIRIQ 2 -->`, `<!-- YULDUZCHA TOPSHIRIQ -->` izohlari bilan).
+   - `xatoni-top.html` — 3 ta ataylab qilingan xatoli "Xato ovchisi" mashqi.
 
 ## 5-bosqich: Git'ga yuklash va hisobot tayyorlash
 1. `git status` va `git add darslar/modul-XX/dars-YYY/` orqali fayllarni qo'shib, `git commit -m "dars-YYY: <mavzu>"` bajar.

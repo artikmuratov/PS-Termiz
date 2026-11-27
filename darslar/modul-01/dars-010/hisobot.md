@@ -5,9 +5,11 @@
 - **Mavzu:** Audio va video (`<audio>`, `<video>`)
 
 ## Tayyorlangan materiallar
-- [Dars rejasi](./dars-rejasi.md)
+- [Dars rejasi (1-kun)](./dars-rejasi.md)
+- [Mustahkamlash darsi rejasi (2-kun, 45 daqiqa amaliyot)](./amaliy-dars-rejasi.md)
 - [Ma'ruza slaydi](./slayd.html)
-- [Amaliy mini-dastur](./amaliyot/index.html)
+- [Amaliy mini-dastur (namuna)](./amaliyot/index.html)
+- [Mustahkamlash topshirig'i (starter)](./amaliyot/starter.html)
 - ["Xato ovchisi" mashqi](./amaliyot/xatoni-top.html)
 
 ## Git / GitHub holati

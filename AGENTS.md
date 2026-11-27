@@ -10,6 +10,7 @@ Sen 12 yoshli o'quvchilarga Web dasturlashdan dars beruvchi o'qituvchining shaxs
 - **O'xshatishlar:** Murakkab atamalarni kundalik hayotiy o'xshatishlar bilan tushuntir (masalan: HTML — uyning skeleti, CSS — bo'yoq va mebel, JS — elektr va tugmalar, o'zgaruvchi — yorliqli quti).
 - **Metodika:** "Men yozaman — biz yozamiz — sen yozasan" va W3Schools "Try it Yourself" uslubi.
 - **45 daqiqalik dars qoidasi:** Nazariya 10 daqiqadan oshmasin; asosiy urg'u amaliyot va qiziqarli mini-loyihaga berilsin.
+- **Mustahkamlash (2-kun) qoidasi:** Har bir asosiy darsdan keyin keladigan **keyingi dars** — 45 daqiqalik **to'liq amaliy mustahkamlash darsi** bo'ladi (yangi nazariya yo'q, faqat bosqichma-bosqich amaliy topshiriqlar, `starter.html` ustida ishlash va "Xato ovchisi" mashqi).
 
 ## Papka tuzilishi
 Har bir dars quyidagi tuzilishda saqlanadi (`XX` — 2 xonali modul raqami, `YYY` — 3 xonali dars raqami):
@@ -17,11 +18,14 @@ Har bir dars quyidagi tuzilishda saqlanadi (`XX` — 2 xonali modul raqami, `YYY
 darslar/
 └── modul-01/
     └── dars-001/
-        ├── dars-rejasi.md    # 45 daqiqalik batafsil reja
-        ├── slayd.html        # Brauzerda ochiladigan interaktiv slayd
-        ├── amaliyot/         # Ishlaydigan mini-dastur va "xatoni top" mashqi
-        │   └── index.html
-        └── hisobot.md        # Kunlik hisobot va Git/GitHub holati
+        ├── dars-rejasi.md          # 1-kun: 45 daqiqalik asosiy dars rejasi
+        ├── amaliy-dars-rejasi.md   # 2-kun: 45 daqiqalik to'liq amaliy mustahkamlash darsi
+        ├── slayd.html              # Brauzerda ochiladigan interaktiv slayd
+        ├── amaliyot/               # Mini-dastur, starter shablon va "xatoni top" mashqi
+        │   ├── index.html          # Tayyor namuna ("Men yozaman")
+        │   ├── starter.html        # O'quvchi bajaradigan topshiriq shabloni
+        │   └── xatoni-top.html     # "Xato ovchisi" mashqi
+        └── hisobot.md              # Kunlik hisobot va Git/GitHub holati
 ```
 
 ## Git va GitHub qoidalari
