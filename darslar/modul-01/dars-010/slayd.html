@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>010-dars: Audio va video</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --ok: #34d399;
+      --warn: #fbbf24;
+      --code-bg: #020617;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .deck { flex: 1; position: relative; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      padding: 48px 64px;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 22px;
+    }
+    .slide.active { display: flex; }
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 15px;
+    }
+    h1 { font-size: 50px; line-height: 1.15; }
+    h2 { font-size: 36px; color: var(--accent); }
+    p, li { font-size: 24px; line-height: 1.5; color: #e2e8f0; }
+    ul { padding-left: 28px; display: flex; flex-direction: column; gap: 12px; }
+    pre {
+      background: var(--code-bg);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 20px;
+      line-height: 1.55;
+      overflow-x: auto;
+      color: #7dd3fc;
+    }
+    .tip {
+      background: var(--card);
+      border-left: 4px solid var(--accent2);
+      padding: 16px 20px;
+      border-radius: 8px;
+      font-size: 22px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .box {
+      background: var(--card);
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .box h3 { font-size: 22px; color: var(--ok); margin-bottom: 10px; }
+    .warn { border-left: 4px solid var(--warn); }
+    code {
+      background: rgba(56, 189, 248, 0.15);
+      color: #7dd3fc;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.92em;
+    }
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 32px;
+      background: #020617;
+      border-top: 1px solid #1e293b;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid #334155;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="deck" id="deck">
+    <section class="slide active">
+      <span class="badge">1-modul: HTML asoslari • 10-dars</span>
+      <h1>Audio va video</h1>
+      <p>Veb-sahifaga musiqa, ovoz effektlari va video qo'shishni o'rganamiz!</p>
+      <div class="tip">Bugun biz sahifamizga pleyer va kichik televizor o'rnatamiz.</div>
+    </section>
+
+    <section class="slide">
+      <span class="badge">0–5 daqiqa • Qizdirish</span>
+      <h2>O'tgan darsni eslaymiz (Jadvallar)</h2>
+      <ul>
+        <li>HTML da jadval ochish uchun qaysi teg ishlatiladi?</li>
+        <li>Jadvalning bitta qatorini qaysi teg yaratadi?</li>
+        <li><code>&lt;th&gt;</code> va <code>&lt;td&gt;</code> teglarining farqi nimada?</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <span class="badge">5–15 daqiqa • Nazariya</span>
+      <h2>Hayotiy o'xshatish</h2>
+      <div class="grid-2">
+        <div class="box">
+          <h3>&lt;audio&gt; — Musiqa pleyeri</h3>
+          <p>Saytingizda qo'shiq yoki ovozli xabar eshittirish uchun ishlatiladi.</p>
+        </div>
+        <div class="box">
+          <h3>&lt;video&gt; — Kichik televizor</h3>
+          <p>Saytingiz ichida film, multfilm yoki dars videosini ko'rsatadi.</p>
+        </div>
+      </div>
+      <div class="tip warn">
+        <strong>Muhim!</strong> <code>controls</code> atributi — bu pleyerning <strong>Play / Pause / Ovoz</strong> tugmalari. Uni yozmasangiz, pultsiz televizordek tugmalar ko'rinmaydi!
+      </div>
+    </section>
+
+    <section class="slide">
+      <span class="badge">Nazariya • Kod namunasi</span>
+      <h2>&lt;audio&gt; qanday yoziladi?</h2>
+      <pre>&lt;audio controls&gt;
+  &lt;source src="musiqa.mp3" type="audio/mpeg"&gt;
+  Brauzeringiz audio tegini qo'llab-quvvatlamaydi.
+&lt;/audio&gt;</pre>
+      <ul>
+        <li><code>controls</code> — ijro tugmalarini chiqaradi.</li>
+        <li><code>src</code> — ovoz faylining manzili (yo'li).</li>
+        <li><code>type</code> — fayl turi (masalan, <code>audio/mpeg</code> yoki <code>audio/wav</code>).</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <span class="badge">Nazariya • Video</span>
+      <h2>&lt;video&gt; qanday yoziladi?</h2>
+      <pre>&lt;video controls width="400" poster="muqova.jpg"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Brauzeringiz videoni ocholmadi.
+&lt;/video&gt;</pre>
+      <ul>
+        <li><code>width</code> — video oynasining kengligi (pikselda).</li>
+        <li><code>poster</code> — video boshlanishidan oldin ko'rinadigan rasm (muqova).</li>
+        <li><code>loop</code> — tugagach qayta-qayta ijro etish; <code>muted</code> — ovozsiz boshlash.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <span class="badge">15–37 daqiqa • Amaliyot</span>
+      <h2>Bugungi topshiriq: "Mening Media Markazim"</h2>
+      <ul>
+        <li><strong>Men yozaman:</strong> <code>amaliyot/index.html</code> da tayyor pleyerni ko'ramiz.</li>
+        <li><strong>Biz yozamiz:</strong> Pleyerga <code>loop</code> qo'shamiz va video o'lchamini o'zgartiramiz.</li>
+        <li><strong>Sen yozasan:</strong> Sahifaga o'zingning <code>&lt;audio controls&gt;</code> va <code>&lt;video controls&gt;</code> bloklaringni qo'sh!</li>
+      </ul>
+      <div class="tip">Eslatma: Internetdan musiqa/video olayotganda mualliflik huquqiga e'tibor bering!</div>
+    </section>
+
+    <section class="slide">
+      <span class="badge">37–42 daqiqa • O'yin</span>
+      <h2>"Xato ovchisi" mashqi</h2>
+      <p><code>amaliyot/xatoni-top.html</code> faylida <strong>3 ta xato</strong> yashiringan:</p>
+      <ul>
+        <li>Nega audio pleyer ekranda ko'rinmayapti?</li>
+        <li>Nega ikkinchi pleyer faylni topolmayapti?</li>
+        <li>Video tegi qayerda yopilmay qolgan?</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <span class="badge">42–45 daqiqa • Yakun</span>
+      <h2>Bugun nimalarni o'rgandik?</h2>
+      <ul>
+        <li>Ovoz uchun <code>&lt;audio&gt;</code>, video uchun <code>&lt;video&gt;</code> ishlatiladi.</li>
+        <li>Tugmalar chiqishi uchun <code>controls</code> atributi shart.</li>
+        <li>Fayl manzili <code>&lt;source src="..."&gt;</code> orqali ulanadi.</li>
+      </ul>
+      <div class="tip">Keyingi darsda: Foydalanuvchi ism-familiyasini kiritadigan <strong>Formalar</strong> yasaymiz!</div>
+    </section>
+  </div>
+
+  <div class="controls">
+    <span id="counter">1 / 8</span>
+    <div>
+      <button onclick="prev()">← Oldingi</button>
+      <button onclick="next()">Keyingi →</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    let idx = 0;
+    function show(n) {
+      slides[idx].classList.remove('active');
+      idx = (n + slides.length) % slides.length;
+      slides[idx].classList.add('active');
+      document.getElementById('counter').textContent = `${idx + 1} / ${slides.length}`;
+    }
+    const next = () => show(idx + 1);
+    const prev = () => show(idx - 1);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') next();
+      if (e.key === 'ArrowLeft') prev();
+    });
+    show(0);
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mening Media Markazim — 10-dars amaliyoti</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      max-width: 780px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    h1 { color: #38bdf8; margin-bottom: 8px; }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+    h2 { color: #a78bfa; margin-bottom: 10px; font-size: 22px; }
+    audio, video {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 10px;
+      background: #020617;
+    }
+    .note {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mening Media Markazim</h1>
+  <p>10-dars amaliyoti: HTML sahifaga audio va video qo'shish.</p>
+
+  <!-- 1-BO'LIM: AUDIO PLEYER -->
+  <div class="card">
+    <h2>1. Mening Musiqa Pleyerim (&lt;audio&gt;)</h2>
+    <p>Play tugmasini bosing va oddiy musiqiy ohangni tinglang:</p>
+
+    <!-- controls atributi Play, Pause va ovoz tugmalarini chiqaradi -->
+    <audio id="demoAudio" controls loop>
+      <!-- Haqiqiy loyihada bu yerga: <source src="musiqa.mp3" type="audio/mpeg"> yoziladi -->
+      Brauzeringiz audio tegini qo'llab-quvvatlamaydi.
+    </audio>
+    <p class="note">Maslahat: <code>loop</code> atributi qo'shilgani uchun ohang tugagach yana qayta boshlanadi.</p>
+  </div>
+
+  <!-- 2-BO'LIM: VIDEO OYNA -->
+  <div class="card">
+    <h2>2. Mening Video Oynam (&lt;video&gt;)</h2>
+    <p>Video oynasi (muqova rasmi — <code>poster</code> bilan):</p>
+
+    <!-- poster atributi video boshlanishidan oldin ko'rinadigan rasmni belgilaydi -->
+    <video
+      id="demoVideo"
+      controls
+      width="400"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='360'%3E%3Crect width='100%25' height='100%25' fill='%23020617'/%3E%3Ctext x='50%25' y='45%25' fill='%2338bdf8' font-family='sans-serif' font-size='28' text-anchor='middle'%3E10-dars: HTML Video Oynasi%3C/text%3E%3Ctext x='50%25' y='58%25' fill='%2394a3b8' font-family='sans-serif' font-size='18' text-anchor='middle'%3EBu yerga o'zingizning .mp4 videongizni ulang%3C/text%3E%3C/svg%3E">
+      <!-- Haqiqiy loyihada bu yerga: <source src="video.mp4" type="video/mp4"> yoziladi -->
+      Brauzeringiz video tegini qo'llab-quvvatlamaydi.
+    </video>
+    <p class="note">O'zingizning kompyuteringizdagi <code>video.mp4</code> faylini shu papkaga tashlab, <code>&lt;source&gt;</code> bilan ulab ko'ring!</p>
+  </div>
+
+  <!-- O'quvchilar internet/tashqi faylsiz ham <audio controls> ni sinab ko'rishi uchun kichik WAV ohang -->
+  <script>
+    (function createDemoWav() {
+      const sampleRate = 8000;
+      const notes = [262, 294, 330, 392, 523]; // Do, Re, Mi, Sol, Do
+      const noteLen = Math.floor(sampleRate * 0.35);
+      const totalSamples = notes.length * noteLen;
+      const buffer = new ArrayBuffer(44 + totalSamples);
+      const view = new DataView(buffer);
+
+      function writeStr(offset, str) {
+        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+      }
+      writeStr(0, 'RIFF');
+      view.setUint32(4, 36 + totalSamples, true);
+      writeStr(8, 'WAVEfmt ');
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true);
+      view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate, true);
+      view.setUint16(32, 1, true);
+      view.setUint16(34, 8, true);
+      writeStr(36, 'data');
+      view.setUint32(40, totalSamples, true);
+
+      for (let n = 0; n < notes.length; n++) {
+        const freq = notes[n];
+        for (let i = 0; i < noteLen; i++) {
+          const val = 128 + Math.round(50 * Math.sin((2 * Math.PI * freq * i) / sampleRate));
+          view.setUint8(44 + n * noteLen + i, val);
+        }
+      }
+      const blob = new Blob([buffer], { type: 'audio/wav' });
+      document.getElementById('demoAudio').src = URL.createObjectURL(blob);
+    })();
+  </script>
+</body>
+</html>

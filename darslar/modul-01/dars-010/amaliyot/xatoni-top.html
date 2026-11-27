@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <title>Xato ovchisi — 10-dars</title>
+  <style>
+    body { font-family: sans-serif; background: #1e293b; color: #f8fafc; padding: 32px; }
+    .box { background: #0f172a; padding: 20px; border-radius: 12px; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Xato ovchisi: 3 ta xatoni top va tuzat!</h1>
+
+  <!-- 1-XATO: Nega audio pleyer ekranda ko'rinmayapti? (controls yetishmayapti) -->
+  <div class="box">
+    <h2>1-topshiriq: Ko'rinmas pleyer</h2>
+    <audio>
+      <source src="musiqa.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- 2-XATO: Atribut nomi xato yozilgan (scr emas, src bo'lishi kerak) -->
+  <div class="box">
+    <h2>2-topshiriq: Yo'qolgan manzil</h2>
+    <audio controls>
+      <source scr="ovoz.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- 3-XATO: Video tegi yopilmagan -->
+  <div class="box">
+    <h2>3-topshiriq: Yopilmagan video</h2>
+    <video controls width="320">
+      <source src="klip.mp4" type="video/mp4">
+  </div>
+</body>
+</html>
