@@ -25,9 +25,9 @@
 
 ## Tayyorlangan darslar jadvali
 
-| Dars | Mavzu | 1-kun (Asosiy) | Slayd | 2-kun (Mustahkamlash) | Amaliyot fayllari | Hisobot |
-| --- | --- | --- | --- | --- | --- | --- |
-| **010** | Audio va video (`<audio>`, `<video>`) | [Reja](./darslar/modul-01/dars-010/dars-rejasi.md) | [Slayd](./darslar/modul-01/dars-010/slayd.html) | [Amaliy reja](./darslar/modul-01/dars-010/amaliy-dars-rejasi.md) | [Namuna](./darslar/modul-01/dars-010/amaliyot/index.html) • [Starter](./darslar/modul-01/dars-010/amaliyot/starter.html) • [Xatoni top](./darslar/modul-01/dars-010/amaliyot/xatoni-top.html) | [Hisobot](./darslar/modul-01/dars-010/hisobot.md) |
+| Dars | Mavzu | 1-kun (Asosiy) | Slayd | 2-kun (Mustahkamlash) | Amaliyot fayllari | Uyga vazifa | Hisobot |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **010** | Audio va video (`<audio>`, `<video>`) | [Reja](./darslar/modul-01/dars-010/dars-rejasi.md) | [Slayd](./darslar/modul-01/dars-010/slayd.html) | [Amaliy reja](./darslar/modul-01/dars-010/amaliy-dars-rejasi.md) | [Namuna](./darslar/modul-01/dars-010/amaliyot/index.html) • [Starter](./darslar/modul-01/dars-010/amaliyot/starter.html) • [Xatoni top](./darslar/modul-01/dars-010/amaliyot/xatoni-top.html) | [Vazifa](./darslar/modul-01/dars-010/uyga-vazifa.md) | [Hisobot](./darslar/modul-01/dars-010/hisobot.md) |
 
 ---
 

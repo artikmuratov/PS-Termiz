@@ -41,6 +41,7 @@ Foydalanuvchi biror darsni (masalan, "5-darsni tayyorla" yoki "Flexbox darsini t
    - `index.html` — brauzerda darhol ishlaydigan tayyor namuna ("Men yozaman" bosqichi uchun, o'zbekcha izohlar bilan).
    - `starter.html` — **keyingi 45 daqiqalik mustahkamlash darsi** uchun **"Namuna → Sening varianting"** tamoyilidagi fayl: har bir darajada tayyor ishlaydigan misol (namuna) ko'rsatiladi va uning tagida o'quvchi o'z variantini (boshqa mavzu, rang, matn yoki media bilan) yasashi uchun joy (`<!-- SENING VARIANTING -->`) beriladi.
    - `xatoni-top.html` — 3 ta ataylab qilingan xatoli "Xato ovchisi" mashqi.
+2. [uyga-vazifa-shablon.md](./resources/uyga-vazifa-shablon.md) asosida `darslar/modul-XX/dars-YYY/uyga-vazifa.md` faylini yarat (15–20 daqiqada mustaqil bajariladigan vazifa, "Yulduzcha" qo'shimcha shart va "O'zingni tekshir" cheklisti bilan).
 
 ## 5-bosqich: Git'ga yuklash va hisobot tayyorlash
 1. `git status` va `git add darslar/modul-XX/dars-YYY/` orqali fayllarni qo'shib, `git commit -m "dars-YYY: <mavzu>"` bajar.

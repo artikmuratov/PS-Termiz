@@ -25,6 +25,7 @@ darslar/
         │   ├── index.html          # Tayyor namuna ("Men yozaman")
         │   ├── starter.html        # O'quvchi bajaradigan topshiriq shabloni
         │   └── xatoni-top.html     # "Xato ovchisi" mashqi
+        ├── uyga-vazifa.md          # Uyda 15–20 daqiqada bajariladigan topshiriq va cheklist
         └── hisobot.md              # Kunlik hisobot va Git/GitHub holati
 ```
 

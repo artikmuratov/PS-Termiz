@@ -11,6 +11,7 @@
 - [Amaliy mini-dastur (namuna)](./amaliyot/index.html)
 - [Mustahkamlash topshirig'i (starter)](./amaliyot/starter.html)
 - ["Xato ovchisi" mashqi](./amaliyot/xatoni-top.html)
+- [Uyga vazifa](./uyga-vazifa.md)
 
 ## Git / GitHub holati
 - **Commit:** `{{COMMIT_HASH}}`
